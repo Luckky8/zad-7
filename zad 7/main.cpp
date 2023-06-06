@@ -2,20 +2,7 @@
 #include <fstream>
 #include <vector>
 
-class Piksel {
-public:
-    unsigned char r, g, b;
-
-    Piksel(unsigned char red, unsigned char green, unsigned char blue)
-        : r(red), g(green), b(blue) {}
-
-    unsigned char& operator[](int index) {
-        if (index == 0) return r;
-        else if (index == 1) return g;
-        else if (index == 2) return b;
-        else throw std::out_of_range("Nieprawid³owy indeks piksela.");
-    }
-};
+#include "piksel.hpp"
 
 int main() {
     unsigned char charArray[] = { 123, 211, 222 };
